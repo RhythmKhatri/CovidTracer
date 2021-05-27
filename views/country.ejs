@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Country Details</title>
+    <link rel="stylesheet" href="css/district.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="jumbotron"  >
+
+
+
+              <h1 class="bello">Covid-19 Cases All Over World</h1>
+              <section class="info">
+                <div class="container div_info">
+
+
+          </div>
+
+
+        </div>
+
+        <table class="table">
+          <caption></caption>
+          <thead>
+            <tr>
+              <th style="padding-left: 160px " scope="col">STATE</th>
+              <th scope="col">CONFIRMED CASES</th>
+              <th scope="col">RECOVERED</th>
+              <th scope="col">DEATHS</th>
+            </tr>
+          </thead>
+          <tbody>
+      <%# <table class="states_info">
+          <tr>
+            <th>STATE</th>
+            <th>CONFIRMED CASES</th>
+            <th>RECOVERED</th>
+            <th>DEATHS</th>
+          </tr> %>
+          <% for(var i=1;i<countries.Countries.length;i++) { %>
+          <tr>
+            <td>
+                <button type="button" class="btn btn-link col country" name="btn"><%= countries.Countries[i].Country %></button>
+            </td>
+            <td><%= countries.Countries[i].TotalConfirmed %></td>
+            <td><%= countries.Countries[i].TotalRecovered %></td>
+            <td><%= countries.Countries[i].TotalDeaths %></td>
+          </tr>
+          <% } %>
+        </tbody>
+
+      </table>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>States</title>
+    <link rel="stylesheet" href="css/selectstate.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="jumbotron"  >
+      <div class="container">
+        <div class="row">
+          <div class="col-8">
+
+              <!-- <h1 >Select State</h1> -->
+              <form action="/selectstate" method="post">
+                <div class="form-row align-items-center">
+                  <div class="col-auto my-1">
+                    <label class="mr-sm-2" for="inlineFormCustomSelect">Select State</label>
+                    <select name="statepick" class="custom-select mr-sm-2 " id="statepick">
+                      <!-- <option selected>Choose...</option>
+                      <% for(var i=1; i < states.statewise.length;i++) { %>
+                        <option value=" <% states.statewise[i].state %> "> <%= states.statewise[i].state %> </option>
+                      <% } %> -->
+
+
+                      <optgroup label="SELECT">
+                        <% for(var i=1;i<states.statewise.length;i++) { %>
+                            <option value="<%= states.statewise[i].state %>"> <%= states.statewise[i].state %> </option>
+                        <% } %>
+                      </optgroup>
+                      <!-- <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option> -->
+                    </select>
+                  </div>
+                  <!-- <div class="col-auto my-1">
+                    <div class="custom-control custom-checkbox mr-sm-2">
+                      <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                      <label class="custom-control-label" for="customControlAutosizing">Remember my preference</label>
+                    </div>
+                  </div> -->
+                  <div class="col-auto my-1">
+                    <button type="submit" class="btn btn-primary submit" name="button">Submit</button>
+                  </div>
+                </div>
+              </form>
+
+          </div>
+
+          <div class="col">
+            <img class="rounded mx-auto d-block covid-image" src="https://static01.nyt.com/images/2020/04/20/us/india-coronavirus-cases-promo-1587423141914/india-coronavirus-cases-promo-1587423141914-videoSixteenByNineJumbo1600-v223.png" alt="">
+          </div>
+        </div>
+      </div>
+
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+    </body>
+</html>
